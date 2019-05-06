@@ -4,7 +4,7 @@ const CompressionWebpackPlugin = require("compression-webpack-plugin");
 const productionGzipExtensions = ["js", "css"];
 
 module.exports = {
-	publicPath: './',
+  publicPath: "./",
   devServer: {
     proxy: {
       "/api": {

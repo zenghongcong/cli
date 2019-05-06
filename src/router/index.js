@@ -1,19 +1,13 @@
 import Vue from "vue";
 import Router from "vue-router";
 
-//优先加载
-import index from "@/views/index/index";
-
-//懒加载
-// const other = () => import('./views/other/index');
-
 Vue.use(Router);
 
 const routes = [
   {
     path: "/",
     name: "index",
-    component: index,
+    component: () => import('@/views/index/index'),
     meta: {
       title: "硬核"
     }
