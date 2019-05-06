@@ -1,3 +1,6 @@
+<style>
+@import url(./App.styl);
+</style>
 <template>
   <div id="app">
     <router-view></router-view>
@@ -9,7 +12,3 @@ export default {
   name: "app"
 };
 </script>
-
-<style>
-@import url(./App.less);
-</style>

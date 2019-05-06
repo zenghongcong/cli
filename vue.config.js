@@ -4,6 +4,7 @@ const CompressionWebpackPlugin = require("compression-webpack-plugin");
 const productionGzipExtensions = ["js", "css"];
 
 module.exports = {
+	publicPath: './',
   devServer: {
     proxy: {
       "/api": {
@@ -67,14 +68,14 @@ module.exports = {
   css: {
     loaderOptions: {
       stylus: {
-        'resolve url': true,
-        'import': []
+        "resolve url": true,
+        import: []
       }
     }
   },
 
   pluginOptions: {
-    'cube-ui': {
+    "cube-ui": {
       postCompile: true,
       theme: false
     }

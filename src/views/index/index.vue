@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="index">
     <img alt="Vue logo" src="../../assets/logo.png">
     <cube-button>Button</cube-button>
   </div>
@@ -8,15 +8,20 @@
 <script>
 export default {
   name: "index",
-  components:{},
+  components: {},
   mounted() {}
 };
 </script>
 
-<style lang="less">
-img {
-  margin: 0 auto;
-  width: 80%;
+<style lang="stylus">
+.index {
+  img {
+    margin: 0 auto;
+    width: 50%;
+  }
+  .cube-btn {
+    border-radius: 20px;
+  }
 }
 </style>
 

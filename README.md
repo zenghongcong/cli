@@ -1,4 +1,4 @@
-# higo
+# demo
 
 ## Project setup
 ```
