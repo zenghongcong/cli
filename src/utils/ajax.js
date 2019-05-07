@@ -34,7 +34,7 @@ axiosConfig.interceptors.response.use(
   }
 );
 let ajax = function(config) {
-  let loading = config.loading !== "undefined" ? config.loading : true; //loading监听
+  let loading = config.loading !== undefined ? config.loading : true; //loading监听
   config.method = config.type;
 
   if (!config.data) config.data = {};

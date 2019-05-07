@@ -6,12 +6,24 @@
 </template>
 
 <script>
-import { setTimeout } from "timers";
 export default {
   name: "index",
   components: {},
-  methods: {},
-  mounted() {}
+  methods: {
+    getList() {
+      this.ajax({
+        type: "get",
+        url: "/asd/asd",
+        data: {},
+        loading: true,
+      })
+    }
+  },
+  mounted() {
+    setTimeout(() => {
+      this.getList();
+    }, 5000)
+  }
 };
 </script>
 
