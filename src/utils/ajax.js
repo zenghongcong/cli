@@ -1,5 +1,5 @@
 import axios from "axios";
-import store from "@/store/index";
+import store from "@/store";
 import Qs from "qs";
 import md5 from "md5";
 
@@ -34,7 +34,7 @@ axiosConfig.interceptors.response.use(
   }
 );
 let ajax = function(config) {
-  var loading = config.loading ? config.loading : false; //loading监听
+  let loading = config.loading !== "undefined" ? config.loading : true; //loading监听
   config.method = config.type;
 
   if (!config.data) config.data = {};

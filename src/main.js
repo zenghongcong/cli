@@ -1,12 +1,10 @@
 import Vue from "vue";
-import router from "@/router/index";
-import store from "@/store/index";
-import bridge from "@/utils/bridge";
-import rem from "@/utils/rem";
-import ajax from "@/utils/ajax";
-import regex from "@/utils/regex";
+import router from "@/router";
+import store from "@/store";
+import { bridge, rem, ajax, regex } from "@/utils";
 import App from "@/App.vue";
 import "@/cube-ui.js";
+import "@/App.styl";
 
 Vue.config.productionTip = false;
 
@@ -16,7 +14,7 @@ if (process.globalConfig.vConsole) {
 }
 
 if (process.globalConfig.uweb) {
-  require("@/utils/uweb");
+  require("@/uweb");
 }
 
 rem.init();

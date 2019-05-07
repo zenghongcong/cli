@@ -1,3 +1,43 @@
+body {
+    max-width: 750px;
+    margin: 0 auto;
+}
+
 img {
     display: block;
+}
+
+// loading
+.loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    .cube-loading {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        width: 60px;
+        height: 60px;
+        margin: auto;
+        background: rgba(0, 0, 0, 0.6);
+        border-radius: 4px;
+
+        .cube-loading-spinners {
+            position: absolute;
+            top: 2px;
+            left: 2px;
+            bottom: 0;
+            right: 0;
+            margin: auto;
+
+            .cube-loading-spinner {
+                background: #fff;
+            }
+        }
+    }
 }

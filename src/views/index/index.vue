@@ -6,9 +6,11 @@
 </template>
 
 <script>
+import { setTimeout } from "timers";
 export default {
   name: "index",
   components: {},
+  methods: {},
   mounted() {}
 };
 </script>
@@ -19,6 +21,7 @@ export default {
     margin: 0 auto;
     width: 50%;
   }
+
   .cube-btn {
     border-radius: 20px;
   }
