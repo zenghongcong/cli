@@ -56,7 +56,7 @@ let ajax = function(config) {
   delete config.loading;
   let ajax = axiosConfig(config);
   if (loading) {
-    store.state.loading = true;
+    store.commit("updateLoading", true);
     store.dispatch("globalLoading", ajax);
   }
   return ajax;

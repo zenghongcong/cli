@@ -1,5 +1,5 @@
 let actions = {
-  globalLoading({ state, commit }, promise) {
+  globalLoading({ state }, promise) {
     if (!state.globalLoadingTimer) {
       state.promiseObj.push(promise);
       setTimeout(() => {
@@ -7,11 +7,11 @@ let actions = {
         Promise.all(state.promiseObj)
           .then(() => {
             state.globalLoadingTimer = false;
-            commit("updateLoading", false);
+            state.loading = false;
           })
           .catch(() => {
             state.globalLoadingTimer = false;
-            commit("updateLoading", false);
+            state.loading = false;
           });
         state.promiseObj = [];
       }, 1000);
