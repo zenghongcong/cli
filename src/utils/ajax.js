@@ -2,6 +2,7 @@ import axios from "axios";
 import store from "@/store";
 import Qs from "qs";
 import md5 from "md5";
+import { toast } from "@/utils";
 
 let axiosConfig = axios.create({
   baseURL: process.globalConfig.baseUrl,
@@ -25,11 +26,13 @@ axiosConfig.interceptors.request.use(
 axiosConfig.interceptors.response.use(
   response => {
     if (response.data.code != "0000") {
+      toast.show(response.data.msg);
       return Promise.reject(response.data);
     }
     return response.data;
   },
   error => {
+    toast.show(error.message);
     return Promise.reject(error);
   }
 );

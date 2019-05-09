@@ -15,14 +15,14 @@ export default {
         type: "get",
         url: "/asd/asd",
         data: {},
-        loading: true,
-      })
+        loading: true
+      });
     }
   },
   mounted() {
     setTimeout(() => {
       this.getList();
-    }, 5000)
+    }, 5000);
   }
 };
 </script>

@@ -1,7 +1,7 @@
 import Vue from "vue";
 import router from "@/router";
 import store from "@/store";
-import { bridge, rem, ajax, regex } from "@/utils";
+import { bridge, rem, ajax, regex, toast } from "@/utils";
 import App from "@/App.vue";
 import "@/cube-ui.js";
 import "@/App.styl";
@@ -18,6 +18,7 @@ if (process.globalConfig.uweb) {
 }
 
 rem.init();
+Vue.prototype.$toast = toast.show;
 Vue.mixin(bridge);
 Vue.mixin(ajax);
 Vue.mixin(regex);
