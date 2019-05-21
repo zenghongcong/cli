@@ -20,9 +20,9 @@ export default {
     }
   },
   mounted() {
-    setTimeout(() => {
+    this.$delay(5000).then(() => {
       this.getList();
-    }, 5000);
+    });
   }
 };
 </script>
